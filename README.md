@@ -1,98 +1,127 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+<div align="center">
+  <img src="https://nestjs.com/img/logo_text.svg" width="300" alt="NestJS Logo">
+  <h1>Task API - Gerenciador de Tarefas</h1>
+  <p>
+    <strong>Uma API RESTful robusta para gerenciamento de tarefas por usuário, construída com NestJS.</strong>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+    <img src="https://img.shields.io/badge/NestJS-v10.0.0-red" alt="NestJS Version">
+    <img src="https://img.shields.io/badge/PostgreSQL-v13-blue" alt="PostgreSQL Version">
+    <img src="https://img.shields.io/badge/Docker-Ready-blue?logo=docker" alt="Docker Ready">
+  </p>
+</div>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 📑 Índice
 
-## Description
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [✨ Features](#-features)
+- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [🚀 Como Rodar a Aplicação](#-como-rodar-a-aplicação)
+- [📚 Documentação da API](#-documentação-da-api)
+- [📄 Licença](#-licença)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## 📖 Sobre o Projeto
 
-```bash
-$ npm install
-```
+A **Task API** é um backend completo que permite aos usuários se cadastrarem, autenticarem e gerenciarem suas próprias listas de tarefas. Cada usuário tem acesso apenas às suas tarefas, garantindo a privacidade e a segurança dos dados através de autenticação via **JWT (JSON Web Token)**.
 
-## Compile and run the project
+Este projeto foi desenvolvido como um backend escalável e bem estruturado, pronto para ser integrado com qualquer aplicação frontend, como Angular, React ou Vue.js.
 
-```bash
-# development
-$ npm run start
+---
 
-# watch mode
-$ npm run start:dev
+## ✨ Features
 
-# production mode
-$ npm run start:prod
-```
+- ✅ **Autenticação de Usuários**: Sistema completo de registro (`signup`) e login (`signin`) com senhas criptografadas (bcrypt).
+- 🔐 **Autorização com JWT**: Rotas protegidas que só podem ser acessadas com um token JWT válido.
+- 🗂️ **CRUD de Tarefas**: Operações completas de Criar, Ler, Atualizar e Deletar tarefas.
+- 👤 **Tarefas por Usuário**: Cada tarefa está estritamente vinculada ao usuário que a criou.
+- 🐳 **Ambiente Dockerizado**: O banco de dados PostgreSQL roda em um container Docker, facilitando a configuração do ambiente de desenvolvimento.
+- 📝 **Validação de Dados**: Uso de DTOs (Data Transfer Objects) com `class-validator` para garantir a integridade dos dados de entrada.
+- 📄 **Documentação Interativa**: Documentação da API gerada automaticamente com Swagger (OpenAPI), permitindo testar os endpoints diretamente pelo navegador.
 
-## Run tests
+---
 
-```bash
-# unit tests
-$ npm run test
+## 🛠️ Tecnologias Utilizadas
 
-# e2e tests
-$ npm run test:e2e
+A tabela abaixo lista as principais tecnologias e ferramentas utilizadas no desenvolvimento da API:
 
-# test coverage
-$ npm run test:cov
-```
+| Ferramenta | Descrição |
+|------------|-------------|
+| **NestJS** | Um framework Node.js progressivo para construir aplicações backend eficientes e escaláveis. |
+| **TypeScript** | Superset do JavaScript que adiciona tipagem estática ao código. |
+| **PostgreSQL** | Um poderoso sistema de banco de dados relacional de código aberto. |
+| **TypeORM** | ORM (Object-Relational Mapper) para TypeScript e JavaScript. |
+| **Docker** | Plataforma para desenvolver, implantar e executar aplicações em containers. |
+| **JWT** | Padrão aberto (RFC 7519) para criar tokens de acesso que afirmam um número de "claims". |
+| **Bcrypt** | Biblioteca para "hashear" senhas de forma segura. |
+| **Swagger (OpenAPI)** | Ferramenta para projetar, construir, documentar e consumir serviços RESTful. |
+| **Class Validator** | Biblioteca para validação de DTOs baseada em decorators. |
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## 🚀 Como Rodar a Aplicação
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+### **Pré-requisitos**
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
+- [Git](https://git-scm.com)
+- [Node.js (v18 ou superior)](https://nodejs.org/en/)
+- [Docker](https://www.docker.com/) e [Docker Compose](https://docs.docker.com/compose/install/)
 
-## Resources
+### **Passo a Passo**
 
-Check out a few resources that may come in handy when working with NestJS:
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/gacneto/task-manager-app.git](https://github.com/gacneto/task-manager-app.git)
+    cd seu-repositorio
+    ```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-## Support
+3.  **Configure as variáveis de ambiente:**
+    - Crie uma cópia do arquivo de exemplo `.env.example` e renomeie para `.env`.
+    ```bash
+    cp .env.example .env
+    ```
+    - Abra o arquivo `.env` e preencha as variáveis com suas credenciais do banco de dados e um segredo para o JWT. Os valores padrão devem funcionar com a configuração do `docker-compose.yml`.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+4.  **Inicie o banco de dados com Docker:**
+    ```bash
+    docker-compose up -d
+    ```
+    Este comando irá criar e iniciar o container do PostgreSQL em segundo plano.
 
-## Stay in touch
+5.  **Rode a aplicação:**
+    ```bash
+    npm run start:dev
+    ```
+    A API estará disponível em `http://localhost:3000`.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## 📚 Documentação da API
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+A documentação completa e interativa dos endpoints está disponível através do Swagger. Após iniciar a aplicação, acesse o seguinte endereço em seu navegador:
+
+**[http://localhost:3000/api](http://localhost:3000/api)**
+
+Lá você poderá ver todos os endpoints, seus DTOs, e até mesmo testá-los diretamente. Para as rotas protegidas (Tasks), lembre-se de primeiro obter um token no endpoint `POST /auth/signin` e depois autorizar suas requisições clicando no botão "Authorize".
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+<div align="center">
+  Feito por [Lucas Barcelar](https://github.com/gacneto)
+</div>

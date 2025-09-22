@@ -1,6 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
-import { TaskStatus } from '../entities/task.entity';
+import { IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateTaskDto {
   @ApiProperty({ example: 'Estudar NestJS' })
