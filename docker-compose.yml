@@ -1,0 +1,20 @@
+services:
+  # Define o serviço do nosso banco de dados
+  postgres:
+    image: postgres:13                   # Usa a imagem oficial do PostgreSQL versão 13
+    container_name: task-api-db          # Nomeia o container para fácil identificação
+    restart: always                      # Reinicia o container automaticamente se ele parar
+    ports:
+      - "5432:5432"                      # Mapeia a porta 5432 do seu PC para a porta 5432 do container
+    environment:
+      # Variáveis de ambiente para configurar o banco de dados
+      POSTGRES_USER: admin       
+      POSTGRES_PASSWORD: root   
+      POSTGRES_DB: task_api_db          
+    volumes:
+      # Garante que os dados do banco persistam mesmo se o container for removido
+      - postgres_data:/var/lib/postgresql/data
+
+# Define o volume nomeado para persistência dos dados
+volumes:
+  postgres_data:
