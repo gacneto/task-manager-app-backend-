@@ -86,7 +86,7 @@ Antes de começar, você precisará ter as seguintes ferramentas instaladas em s
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/gacneto/task-manager-app-backend.git](https://github.com/gacneto/task-manager-app-backend.git)
+    git clone <https://github.com/gacneto/task-manager-app-backend.git>
     cd task-manager-app-backend
     ```
 
