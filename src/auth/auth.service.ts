@@ -39,7 +39,7 @@ export class AuthService {
         }
     }
 
-    async signIn(loginDto: LoginDto): Promise<{acessToken: string}>{
+    async signIn(loginDto: LoginDto): Promise<{accessToken: string}>{
         const {email, password} = loginDto;
 
         const user = await this.userRepository.findOne({where: {email}});
@@ -47,9 +47,9 @@ export class AuthService {
         if(user && (await bcrypt.compare(password, user.password))){
             const payload = {email: user.email, sub: user.id};
 
-            const acessToken = this.jwtService.sign(payload);
+            const accessToken = this.jwtService.sign(payload);
 
-            return {acessToken};
+            return {accessToken};
         }else{
             throw new UnauthorizedException('Credenciais inválidas. Por favor, verifique seu e-mail e senha.')
         }
