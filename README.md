@@ -14,6 +14,14 @@
 
 ---
 
+## 🔗 Repositório do Frontend
+
+**Importante:** Esta é uma aplicação backend que constrói uma API. O projeto frontend (construído em Angular) está finalizado para visualização do projeto final.
+
+➡️ **Repositório do Frontend:** [Link para o repositório da Pagina Web Angular](https://github.com/gacneto/task-manager-app-frontend.git)
+
+---
+
 ## 📑 Índice
 
 - [Sobre o Projeto](#-sobre-o-projeto)
