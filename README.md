@@ -18,7 +18,7 @@
 
 **Importante:** Esta é uma aplicação backend que constrói uma API. O projeto frontend (construído em Angular) está finalizado para visualização do projeto final.
 
-➡️ **Repositório do Frontend:** [Link para o repositório da Pagina Web Angular](https://github.com/gacneto/task-manager-app-frontend.git)
+➡️ **Repositório do Frontend:** [Link para o repositório da Pagina Web Angular](https://github.com/gacneto/nestjs-task-manager-app-frontend.git)
 
 ---
 
@@ -86,8 +86,8 @@ Antes de começar, você precisará ter as seguintes ferramentas instaladas em s
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <https://github.com/gacneto/task-manager-app-backend.git>
-    cd task-manager-app-backend
+    git clone <https://github.com/gacneto/nestjs-task-manager-app-backend.git>
+    cd nestjs-task-manager-app-backend
     ```
 
 2.  **Instale as dependências:**
