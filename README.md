@@ -18,7 +18,7 @@
 
 **Importante:** Esta é uma aplicação backend que constrói uma API. O projeto frontend (construído em Angular) está finalizado para visualização do projeto final.
 
-➡️ **Repositório do Frontend:** [Link para o repositório da Pagina Web Angular](https://github.com/gacneto/nestjs-task-manager-app-frontend.git)
+➡️ **Repositório do Frontend:** [Link para o repositório da Pagina Web Angular](https://github.com/gacneto/angular-task-manager-app-frontend.git)
 
 ---
 
